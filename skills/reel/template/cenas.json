@@ -1,0 +1,61 @@
+{
+  "cores": {
+    "fundo": "#0E0F12",
+    "texto": "#F4F4F2",
+    "destaque": "#FFC94A",
+    "suave": "#9A9CA3",
+    "sobreDestaque": "#0E0F12"
+  },
+  "fonte": "Inter",
+  "fonteItalica": "Instrument Serif",
+  "legenda": true,
+  "narracao": null,
+  "palavras": null,
+  "trilha": null,
+  "cenas": [
+    {
+      "tipo": "gancho",
+      "titulo": "Treina todo dia e nada muda?",
+      "destaque": "nada muda",
+      "fala": "Treina todo dia e nada muda?"
+    },
+    {
+      "tipo": "titulo",
+      "titulo": "O problema não é o treino.",
+      "subtitulo": "É o que acontece nas outras 23 horas.",
+      "fala": "O problema quase nunca é o treino, é o que você faz nas outras 23 horas."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Os 3 vilões",
+      "itens": [
+        "Dormir menos de 7 horas",
+        "Comer pouca proteína",
+        "Repetir a mesma carga"
+      ],
+      "fala": "São três vilões: dormir menos de sete horas, comer pouca proteína e repetir a mesma carga por meses."
+    },
+    {
+      "tipo": "numero",
+      "de": 0,
+      "ate": 1.6,
+      "decimais": 1,
+      "sufixo": " g",
+      "rotulo": "de proteína por quilo de peso, por dia",
+      "fala": "Uma referência comum para quem treina é 1,6 grama de proteína por quilo, todo dia."
+    },
+    {
+      "tipo": "antes-depois",
+      "antes": "Treino novo toda semana",
+      "depois": "Mesmo treino, carga subindo",
+      "fala": "Em vez de trocar o treino toda semana, mantenha o mesmo e suba a carga."
+    },
+    {
+      "tipo": "cta",
+      "chamada": "Comenta",
+      "palavra": "PLANO",
+      "promessa": "que eu te mando o checklist das 23 horas",
+      "fala": "Comenta PLANO que eu te mando o checklist das 23 horas."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# nada pesado nem secreto vai para o repositório
+node_modules/
+out/
+.env
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.m4a
+template/public/palavras.json

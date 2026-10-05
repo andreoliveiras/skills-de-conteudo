@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrossel</title>
+
+<!-- FONTES: troque as duas famílias aqui e nas variáveis --fonte-titulo e --fonte-texto abaixo.
+     Sem internet, o navegador cai para as fontes do sistema e o carrossel continua legível. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* =========================================================
+     PALETA E FONTES: é só aqui que você mexe para trocar o visual.
+     ========================================================= */
+  :root {
+    --bg: #0f1115;            /* fundo dos slides */
+    --fg: #f5f6f8;            /* texto principal */
+    --muted: #9aa0ab;         /* texto de apoio */
+    --destaque: #3ddc84;      /* cor de destaque (números, grifos, botão) */
+    --destaque-texto: #0f1115;/* texto sobre a cor de destaque */
+    --card: #1a1d24;          /* caixas e cartões */
+    --fonte-titulo: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --fonte-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #2a2d34; font-family: var(--fonte-texto); }
+
+  /* Todos os slides empilhados para você conferir no navegador. Use zoom-out (Cmd/Ctrl -) para ver mais de uma vez. */
+  .deck { display: flex; flex-direction: column; align-items: center; gap: 48px; padding: 48px 0; }
+
+  /* Cada slide tem exatamente 1080x1350. Não altere. */
+  .slide {
+    width: 1080px; height: 1350px; flex: none;
+    background: var(--bg); color: var(--fg);
+    padding: 96px 88px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative; overflow: hidden;
+  }
+
+  .topo, .rodape { display: flex; justify-content: space-between; align-items: center;
+    font-size: 30px; color: var(--muted); font-weight: 500; letter-spacing: .01em; }
+  .corpo { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 40px; }
+
+  h1, h2 { font-family: var(--fonte-titulo); font-weight: 800; line-height: 1.04; letter-spacing: -.02em; }
+  h1 { font-size: 112px; }
+  h2 { font-size: 76px; }
+  p  { font-size: 46px; line-height: 1.32; font-weight: 400; }
+  .apoio { font-size: 38px; color: var(--muted); }
+  .grifo { color: var(--destaque); }
+
+  .numero { font-family: var(--fonte-titulo); font-weight: 800; font-size: 200px; line-height: .9;
+    color: var(--destaque); letter-spacing: -.04em; }
+  .cartao { background: var(--card); border-radius: 36px; padding: 48px 52px; }
+  .lista { list-style: none; display: flex; flex-direction: column; gap: 28px; }
+  .lista li { font-size: 44px; line-height: 1.3; padding-left: 64px; position: relative; }
+  .lista li::before { content: ''; position: absolute; left: 0; top: 14px; width: 30px; height: 30px;
+    border-radius: 50%; background: var(--destaque); }
+
+  .botao { align-self: flex-start; background: var(--destaque); color: var(--destaque-texto);
+    font-weight: 800; font-size: 48px; padding: 30px 56px; border-radius: 999px; }
+  .seta { color: var(--destaque); font-weight: 800; }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- ===== SLIDE 1: CAPA (promessa específica + curiosidade) ===== -->
+  <section class="slide capa">
+    <div class="topo"><span>@seuperfil</span><span>1/5</span></div>
+    <div class="corpo">
+      <h1>3 erros que fazem seu <span class="grifo">conteúdo</span> não ser salvo</h1>
+      <p class="apoio">E como corrigir cada um hoje.</p>
+    </div>
+    <div class="rodape"><span>Arrasta para o lado</span><span class="seta">→</span></div>
+  </section>
+
+  <!-- ===== SLIDE 2: CONTEÚDO NUMERADO (1 ideia por slide) ===== -->
+  <section class="slide">
+    <div class="topo"><span>@seuperfil</span><span>2/5</span></div>
+    <div class="corpo">
+      <div class="numero">1</div>
+      <h2>Falar de tudo ao mesmo tempo</h2>
+      <p>Cada slide carrega uma única ideia. Se você precisa de duas, são dois slides.</p>
+    </div>
+    <div class="rodape"><span></span><span class="seta">→</span></div>
+  </section>
+
+  <!-- ===== SLIDE 3: CONTEÚDO COM LISTA / CARTÃO ===== -->
+  <section class="slide">
+    <div class="topo"><span>@seuperfil</span><span>3/5</span></div>
+    <div class="corpo">
+      <h2>Antes de postar, confira</h2>
+      <div class="cartao">
+        <ul class="lista">
+          <li>A capa promete algo específico?</li>
+          <li>Tem uma ideia só por slide?</li>
+          <li>Dá para ler no celular sem zoom?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape"><span></span><span class="seta">→</span></div>
+  </section>
+
+  <!-- ===== SLIDE 4: SLIDE DE SALVAR (resumo que vale guardar) ===== -->
+  <section class="slide">
+    <div class="topo"><span>@seuperfil</span><span>4/5</span></div>
+    <div class="corpo">
+      <h2>Resumo para <span class="grifo">salvar</span></h2>
+      <div class="cartao">
+        <ul class="lista">
+          <li>Promessa específica na capa</li>
+          <li>Uma ideia por slide</li>
+          <li>Letra grande, pouco texto</li>
+        </ul>
+      </div>
+      <p class="apoio">Salva este post para conferir antes do próximo carrossel.</p>
+    </div>
+    <div class="rodape"><span></span><span class="seta">→</span></div>
+  </section>
+
+  <!-- ===== SLIDE 5: CTA (uma única ação) ===== -->
+  <section class="slide">
+    <div class="topo"><span>@seuperfil</span><span>5/5</span></div>
+    <div class="corpo">
+      <h2>Quer o próximo modelo pronto?</h2>
+      <p>Comenta <span class="grifo">PALAVRA</span> e eu te mando.</p>
+      <div class="botao">Comenta PALAVRA</div>
+    </div>
+    <div class="rodape"><span>Siga @seuperfil para mais</span><span></span></div>
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "meu-reel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reel vertical 1080x1920 dirigido por cenas.json. Renderiza local com Remotion.",
+  "scripts": {
+    "studio": "remotion studio --props=./cenas.json",
+    "still": "remotion still Reel out/quadro.png --props=./cenas.json",
+    "render": "remotion render Reel out/reel.mp4 --props=./cenas.json"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.409",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.409"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "typescript": "5.7.2"
+  }
+}

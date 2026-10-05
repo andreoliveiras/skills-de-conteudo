@@ -1,0 +1,4 @@
+Aqui ficam os arquivos de mídia do reel:
+- narracao.mp3 e palavras.json (gerados por scripts/narrar.mjs)
+- trilha.mp3 (sua música, preparada por scripts/mixar.mjs)
+Eles não vão para o git (veja o .gitignore da skill).
