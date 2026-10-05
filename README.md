@@ -28,10 +28,10 @@ Pré-requisito: Node 18 ou mais novo. No terminal:
 npx skills add andreoliveiras/skills-de-conteudo
 ```
 
-Para instalar para todos os seus projetos (global), acrescente `-g`:
+Para instalar para todos os seus projetos (global) direto no Claude Code, sem perguntas:
 
 ```bash
-npx skills add andreoliveiras/skills-de-conteudo -g
+npx skills add andreoliveiras/skills-de-conteudo -g -a claude-code -y
 ```
 
 Para só ver o que o repositório oferece, sem instalar nada: `npx skills add andreoliveiras/skills-de-conteudo -l`. Para instalar uma skill específica: `-s carrossel`.
