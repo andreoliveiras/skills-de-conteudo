@@ -67,9 +67,9 @@ if (!erros.length) {
 
   // 3. CTA no fim
   const ultima = dados.cenas[dados.cenas.length - 1];
-  if (ultima.tipo !== 'cta') erros.push('A última cena precisa ser do tipo "cta" (o "Comenta PALAVRA").');
+  if (ultima.tipo !== 'cta') erros.push('A última cena precisa ser do tipo "cta" (a chamada final com a PALAVRA).');
   else if (!ultima.fala.toLowerCase().includes(ultima.palavra.toLowerCase())) avisos.push(`A fala do CTA não diz a palavra "${ultima.palavra}". Diga em voz alta o que a pessoa deve comentar.`);
-  else ok.push(`CTA no fim: Comenta ${ultima.palavra.toUpperCase()}`);
+  else ok.push(`CTA no fim: ${ultima.chamada ?? 'Comenta'} ${ultima.palavra.toUpperCase()}`);
 
   // 4. textos que estouram a tela
   dados.cenas.forEach((c, i) => {
